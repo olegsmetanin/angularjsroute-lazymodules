@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Load on demand demo</title>
+</head>
+<body>
+	<a href="#!/home">home</a>
+	<a href="#!/demand">demand</a>
+	<a href="#!/demand2">demand2</a>
+	<a href="#!/order">order</a>
+	<a href="#!/order2">order2</a>
+
+	<div ng-view></div>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="src/angular.js"></script>
+    <script type="text/javascript" src="src/loadondemand.js"></script>
+    <script type="text/javascript" src="src/app.js"></script>
+	<script type="text/javascript" src="src/modules/demand/routes.js"></script>
+	<script type="text/javascript" src="src/modules/order/routes.js"></script>
+
+	<script>
+
+		angular.element(document).ready(function() {
+			angular.bootstrap(document, ['app', 'demand', 'order']);
+		});
+
+	</script>
+</body>
+</html>
